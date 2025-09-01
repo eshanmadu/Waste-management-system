@@ -1,0 +1,238 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* General Styling */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;/* Adjust this value to match the header height */
+}
+
+/* Container */
+.waste-reporting-container {
+  max-width: 1000px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Title and Subtitle */
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #004d40;
+}
+
+.highlight {
+  color: #00897b;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: #4CAF50;
+  margin-bottom: 20px;
+}
+
+/* Form Styling */
+.form-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Left Form Section */
+.form-left {
+  flex: 1;
+  text-align: left;
+}
+
+.form-left label {
+  display: block;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.form-left input,
+.form-left select,
+.form-left textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Right Form Section (Image Upload) */
+.form-right {
+  flex: 1;
+  text-align: left;
+}
+
+.form-right label {
+  font-weight: bold;
+}
+
+.image-placeholder {
+  width: 100%;
+  height: 150px;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #757575;
+}
+
+
+/* Submit Button */
+.submit-button {
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #00897b;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #004d40;
+}
+
+/*Reward Page*/
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.alert {
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+
+.alert-info {
+  background-color: #d1ecf1;
+  border-color: #bee5eb;
+  color: #0c5460;
+}
+
+.rewards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 20px;
+}
+
+.reward-item {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: transform 0.2s;
+}
+
+.reward-item:hover {
+  transform: scale(1.05);
+}
+
+.reward-item.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.reward-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.reward-item p {
+  margin: 5px 0;
+}
+
+.not-enough-points {
+  color: red;
+  font-size: 0.9em;
+}
+
+.redeem-form {
+  margin-top: 20px;
+}
+
+.redeem-form input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.redeem-form button {
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.redeem-form button:hover {
+  background-color: #218838;
+}
+
+@import url('https://unpkg.com/leaflet@1.7.1/dist/leaflet.css');
