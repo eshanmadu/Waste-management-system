@@ -28,7 +28,7 @@ const AdRedeems = () => {
 
   const fetchRedeems = async () => {
     try {
-      const response = await fetch('http://localhost:5001/api/redeem');
+      const response = await fetch('https://waste-management-system-88cb.onrender.com/api/redeem');
       if (!response.ok) throw new Error('Failed to fetch redeems');
       const data = await response.json();
       setRedeems(data);
@@ -84,7 +84,7 @@ const AdRedeems = () => {
         throw new Error('Cannot update status of delivered redeems');
       }
 
-      const response = await fetch(`http://localhost:5001/api/redeem/${redeemId}`, {
+      const response = await fetch(`https://waste-management-system-88cb.onrender.com/api/redeem/${redeemId}`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json'

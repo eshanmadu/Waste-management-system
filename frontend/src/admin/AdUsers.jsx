@@ -38,8 +38,8 @@ const AdUsers = () => {
   const fetchData = async () => {
     try {
       const [usersResponse, volunteersResponse] = await Promise.all([
-        fetch('http://localhost:5001/api/users'),
-        fetch('http://localhost:5001/api/volunteers')
+        fetch('https://waste-management-system-88cb.onrender.com/api/users'),
+        fetch('https://waste-management-system-88cb.onrender.com/api/volunteers')
       ]);
 
       if (!usersResponse.ok || !volunteersResponse.ok) {
@@ -92,7 +92,7 @@ const AdUsers = () => {
 
   const handleApproveVolunteer = async (volunteerId) => {
     try {
-      const response = await fetch(`http://localhost:5001/api/volunteers/${volunteerId}/approve`, {
+      const response = await fetch(`https://waste-management-system-88cb.onrender.com/api/volunteers/${volunteerId}/approve`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json'
@@ -124,7 +124,7 @@ const AdUsers = () => {
 
   const handleRejectVolunteer = async (volunteerId) => {
     try {
-      const response = await fetch(`http://localhost:5001/api/volunteers/${volunteerId}/reject`, {
+      const response = await fetch(`https://waste-management-system-88cb.onrender.com/api/volunteers/${volunteerId}/reject`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json'
@@ -173,7 +173,7 @@ const AdUsers = () => {
   const handleDeleteUser = async (userId) => {
     if (window.confirm('Are you sure you want to delete this user?')) {
       try {
-        const response = await fetch(`http://localhost:5001/api/users/${userId}`, {
+        const response = await fetch(`https://waste-management-system-88cb.onrender.com/api/users/${userId}`, {
           method: 'DELETE'
         });
 

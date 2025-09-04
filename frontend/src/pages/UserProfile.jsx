@@ -46,7 +46,7 @@ const UserProfile = () => {
 
       console.log("Fetching reports for user:", userId);
 
-      const response = await fetch(`http://localhost:5001/api/report/reports/${userId}`, {
+      const response = await fetch(`https://waste-management-system-88cb.onrender.com/api/report/reports/${userId}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -113,7 +113,7 @@ const UserProfile = () => {
   
     try {
       const response = await fetch(
-        `http://localhost:5001/api/users/${userId}/change-password`,
+        `https://waste-management-system-88cb.onrender.com/api/users/${userId}/change-password`,
         {
           method: "PUT",
           headers: {
@@ -169,7 +169,7 @@ const UserProfile = () => {
   
     try {
       
-      const response = await fetch(`http://localhost:5001/api/users/${userId}`, {
+      const response = await fetch(`https://waste-management-system-88cb.onrender.com/api/users/${userId}`, {
         method: "GET",
         headers: {
           Authorization: `Bearer ${token}`,
@@ -202,7 +202,7 @@ const UserProfile = () => {
         return;
       }
 
-      const response = await fetch(`http://localhost:5001/api/recycle/user/${userId}`, {
+      const response = await fetch(`https://waste-management-system-88cb.onrender.com/api/recycle/user/${userId}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -230,7 +230,7 @@ const UserProfile = () => {
         return;
       }
 
-      const response = await fetch(`http://localhost:5001/api/report/reports/${userId}`, {
+      const response = await fetch(`https://waste-management-system-88cb.onrender.com/api/report/reports/${userId}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -259,7 +259,7 @@ const UserProfile = () => {
       }
 
       // First get all events
-      const response = await fetch('http://localhost:5001/api/events', {
+      const response = await fetch('https://waste-management-system-88cb.onrender.com/api/events', {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -295,7 +295,7 @@ const UserProfile = () => {
 
   const checkVolunteerStatus = async (userId) => {
     try {
-      const response = await fetch(`http://localhost:5001/api/volunteers/user/${userId}`);
+      const response = await fetch(`https://waste-management-system-88cb.onrender.com/api/volunteers/user/${userId}`);
       if (response.ok) {
         const volunteerData = await response.json();
         setIsVolunteer(true);
@@ -399,7 +399,7 @@ const UserProfile = () => {
     const userId = localStorage.getItem("userId");
     
     try {
-      const response = await fetch(`http://localhost:5001/api/users/${userId}`, {
+      const response = await fetch(`https://waste-management-system-88cb.onrender.com/api/users/${userId}`, {
         method: "PUT",
         headers: {
           Authorization: `Bearer ${token}`,

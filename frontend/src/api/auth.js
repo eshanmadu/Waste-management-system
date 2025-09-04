@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:5001/api/auth";
+const API_URL = "https://waste-management-system-88cb.onrender.com/api/auth";
 
 export const signup = async (formData) => {
   const response = await fetch(`${API_URL}/signup`, {

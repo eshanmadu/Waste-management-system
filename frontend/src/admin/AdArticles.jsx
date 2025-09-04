@@ -98,7 +98,7 @@ const AdArticles = () => {
 
   const fetchArticles = async () => {
     try {
-      const response = await fetch('http://localhost:5001/api/articles');
+      const response = await fetch('https://waste-management-system-88cb.onrender.com/api/articles');
       const data = await response.json();
       setArticles(data);
       setLoading(false);
@@ -136,7 +136,7 @@ const AdArticles = () => {
 
   const handleArticleStatus = async (articleId, status) => {
     try {
-      const response = await fetch(`http://localhost:5001/api/articles/${articleId}/status`, {
+      const response = await fetch(`https://waste-management-system-88cb.onrender.com/api/articles/${articleId}/status`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -181,7 +181,7 @@ const AdArticles = () => {
   const handleDelete = async (articleId) => {
     if (window.confirm('Are you sure you want to delete this article?')) {
       try {
-        const response = await fetch(`http://localhost:5001/api/articles/${articleId}`, {
+        const response = await fetch(`https://waste-management-system-88cb.onrender.com/api/articles/${articleId}`, {
           method: 'DELETE',
         });
 

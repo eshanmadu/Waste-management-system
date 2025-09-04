@@ -102,11 +102,11 @@ const Home = () => {
     const fetchData = async () => {
       try {
         const [leaderboardRes, reportsRes, volunteersRes, staffRes, recyclingRes] = await Promise.all([
-          fetch("http://localhost:5001/api/leaderboard"),
-          fetch("http://localhost:5001/api/report/reports"),
-          fetch("http://localhost:5001/api/volunteers"),
-          fetch("http://localhost:5001/api/staff"),
-          fetch("http://localhost:5001/api/recycle")
+          fetch("https://waste-management-system-88cb.onrender.com/api/leaderboard"),
+          fetch("https://waste-management-system-88cb.onrender.com/api/report/reports"),
+          fetch("https://waste-management-system-88cb.onrender.com/api/volunteers"),
+          fetch("https://waste-management-system-88cb.onrender.com/api/staff"),
+          fetch("https://waste-management-system-88cb.onrender.com/api/recycle")
         ]);
 
         if (!leaderboardRes.ok || !reportsRes.ok || !volunteersRes.ok || !staffRes.ok || !recyclingRes.ok) {
@@ -219,7 +219,7 @@ const Home = () => {
         submitData.email = formData.email;
       }
 
-      const response = await fetch('http://localhost:5001/api/contact/submit', {
+      const response = await fetch('https://waste-management-system-88cb.onrender.com/api/contact/submit', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

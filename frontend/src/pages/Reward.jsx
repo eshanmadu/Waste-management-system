@@ -42,7 +42,7 @@ const Rewards = () => {
 
   const fetchRewards = async () => {
     try {
-      const response = await fetch("http://localhost:5001/api/rewards");
+      const response = await fetch("https://waste-management-system-88cb.onrender.com/api/rewards");
       if (!response.ok) throw new Error("Failed to load rewards");
       const data = await response.json();
       setRewards(data);
@@ -63,7 +63,7 @@ const Rewards = () => {
     }
   
     try {
-      const response = await fetch(`http://localhost:5001/api/users/${userId}`, {
+      const response = await fetch(`https://waste-management-system-88cb.onrender.com/api/users/${userId}`, {
         method: "GET",
         headers: {
           Authorization: `Bearer ${token}`,
@@ -95,7 +95,7 @@ const Rewards = () => {
 
     try {
       console.log('Fetching redeems for userId:', userId);
-      const response = await fetch(`http://localhost:5001/api/redeem`, {
+      const response = await fetch(`https://waste-management-system-88cb.onrender.com/api/redeem`, {
         method: "GET",
         headers: {
           Authorization: `Bearer ${token}`,
@@ -173,7 +173,7 @@ const Rewards = () => {
       const token = localStorage.getItem('token');
       if (!token) throw new Error('Authentication required');
 
-      const response = await fetch(`http://localhost:5001/api/redeem/${editingRedeem._id}`, {
+      const response = await fetch(`https://waste-management-system-88cb.onrender.com/api/redeem/${editingRedeem._id}`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',
@@ -250,7 +250,7 @@ const Rewards = () => {
         shippingInfo
       };
 
-      const response = await fetch('http://localhost:5001/api/redeem', {
+      const response = await fetch('https://waste-management-system-88cb.onrender.com/api/redeem', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -308,7 +308,7 @@ const Rewards = () => {
       const token = localStorage.getItem('token');
       if (!token) throw new Error('Authentication required');
 
-      const response = await fetch(`http://localhost:5001/api/redeem/${redeemToCancel._id}/cancel`, {
+      const response = await fetch(`https://waste-management-system-88cb.onrender.com/api/redeem/${redeemToCancel._id}/cancel`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',

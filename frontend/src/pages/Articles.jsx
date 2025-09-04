@@ -104,7 +104,7 @@ const ArticlesPage = () => {
 
   const fetchArticles = async () => {
     try {
-      const response = await fetch('http://localhost:5001/api/articles');
+      const response = await fetch('https://waste-management-system-88cb.onrender.com/api/articles');
       const data = await response.json();
       // Filter only approved articles
       const approvedArticles = data.filter(article => article.status === 'approved');

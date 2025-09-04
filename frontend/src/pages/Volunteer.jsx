@@ -61,7 +61,7 @@ const Volunteer = () => {
       const token = localStorage.getItem('token');
       console.log('Fetching user details for userId:', userId);
       
-      const response = await fetch(`http://localhost:5001/api/users/${userId}`, {
+      const response = await fetch(`https://waste-management-system-88cb.onrender.com/api/users/${userId}`, {
         headers: {
           'Authorization': `Bearer ${token}`,
           'Content-Type': 'application/json'
@@ -236,7 +236,7 @@ const Volunteer = () => {
         userId: payload.userId
       };
 
-      const response = await fetch('http://localhost:5001/api/volunteers', {
+      const response = await fetch('https://waste-management-system-88cb.onrender.com/api/volunteers', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

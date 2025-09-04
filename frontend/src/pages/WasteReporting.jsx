@@ -307,7 +307,7 @@ const WasteReporting = () => {
         const formData = new FormData();
         formData.append('photo', photo);
         
-        const uploadResponse = await fetch("http://localhost:5001/api/report/upload-photo", {
+        const uploadResponse = await fetch("https://waste-management-system-88cb.onrender.com/api/report/upload-photo", {
           method: "POST",
           headers: {
             Authorization: `Bearer ${token}`,
@@ -353,7 +353,7 @@ const WasteReporting = () => {
       }
 
       // submit report with photo URLs
-      const response = await fetch("http://localhost:5001/api/report/report", {
+      const response = await fetch("https://waste-management-system-88cb.onrender.com/api/report/report", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -434,7 +434,7 @@ const WasteReporting = () => {
 
     try {
       const response = await fetch(
-        `http://localhost:5001/api/report/searchByName?name=${searchName}`
+        `https://waste-management-system-88cb.onrender.com/api/report/searchByName?name=${searchName}`
       );
       const data = await response.json();
 

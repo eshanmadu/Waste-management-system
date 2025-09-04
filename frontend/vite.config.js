@@ -7,7 +7,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'http://localhost:5001', // change this to your backend's address
+        target: 'https://waste-management-system-88cb.onrender.com', // production backend address
         changeOrigin: true,
         secure: false,
         rewrite: (path) => path.replace(/^\/api/, '')

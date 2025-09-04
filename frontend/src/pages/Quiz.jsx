@@ -54,7 +54,7 @@ const Quiz = () => {
   useEffect(() => {
     const fetchQuestions = async () => {
       try {
-        const response = await fetch('http://localhost:5001/api/quiz');
+        const response = await fetch('https://waste-management-system-88cb.onrender.com/api/quiz');
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }

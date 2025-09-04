@@ -12,7 +12,7 @@ const ArticleDetail = () => {
     const fetchArticle = async () => {
       if (!location.state?.article) {
         try {
-          const response = await fetch(`http://localhost:5001/api/articles/${id}`);
+          const response = await fetch(`https://waste-management-system-88cb.onrender.com/api/articles/${id}`);
           if (!response.ok) {
             throw new Error('Article not found');
           }

@@ -20,7 +20,7 @@ const AdRecycles = () => {
     const fetchSubmissions = async () => {
       setTableLoading(true);
       try {
-        const response = await fetch("http://localhost:5001/api/recycle");
+        const response = await fetch("https://waste-management-system-88cb.onrender.com/api/recycle");
         const data = await response.json();
         
         if (!response.ok) {
@@ -192,7 +192,7 @@ const AdRecycles = () => {
                                 onClick={async () => {
                                   if (window.confirm('Are you sure you want to delete this entry?')) {
                                     try {
-                                      const response = await fetch(`http://localhost:5001/api/recycle/${submission._id}`, {
+                                      const response = await fetch(`https://waste-management-system-88cb.onrender.com/api/recycle/${submission._id}`, {
                                         method: 'DELETE'
                                       });
                                       const result = await response.json();

@@ -19,7 +19,7 @@ const Staff = () => {
 
   const fetchStaffData = async () => {
     try {
-      const response = await fetch('http://localhost:5001/api/staff');
+      const response = await fetch('https://waste-management-system-88cb.onrender.com/api/staff');
       if (response.ok) {
         const data = await response.json();
         setStaffList(data);

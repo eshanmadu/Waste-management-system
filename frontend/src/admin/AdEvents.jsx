@@ -40,7 +40,7 @@ const AdEvents = () => {
 
   const fetchEvents = async () => {
     try {
-      const response = await fetch('http://localhost:5001/api/events');
+      const response = await fetch('https://waste-management-system-88cb.onrender.com/api/events');
       if (!response.ok) throw new Error('Failed to fetch events');
       const data = await response.json();
       setEvents(data);
@@ -83,8 +83,8 @@ const AdEvents = () => {
       };
 
       const url = editingEvent 
-        ? `http://localhost:5001/api/events/${editingEvent._id}`
-        : 'http://localhost:5001/api/events';
+        ? `https://waste-management-system-88cb.onrender.com/api/events/${editingEvent._id}`
+        : 'https://waste-management-system-88cb.onrender.com/api/events';
       
       const method = editingEvent ? 'PUT' : 'POST';
 
@@ -126,7 +126,7 @@ const AdEvents = () => {
     if (!window.confirm('Are you sure you want to delete this event?')) return;
     
     try {
-      const response = await fetch(`http://localhost:5001/api/events/${id}`, {
+      const response = await fetch(`https://waste-management-system-88cb.onrender.com/api/events/${id}`, {
         method: 'DELETE',
       });
 

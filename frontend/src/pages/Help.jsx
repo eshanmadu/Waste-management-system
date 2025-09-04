@@ -176,7 +176,7 @@ const HelpAndSupportPage = () => {
       setChatMessage("");
       
       try {
-        const response = await fetch('http://localhost:5001/api/ai-assistant/ask', {
+        const response = await fetch('https://waste-management-system-88cb.onrender.com/api/ai-assistant/ask', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

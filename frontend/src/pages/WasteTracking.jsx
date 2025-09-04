@@ -43,7 +43,7 @@ const WasteTracking = () => {
 
   const fetchReports = async () => {
     try {
-      const response = await fetch('http://localhost:5001/api/report/locations');
+      const response = await fetch('https://waste-management-system-88cb.onrender.com/api/report/locations');
       const data = await response.json();
       setReports(data);
       setFilteredReports(data);

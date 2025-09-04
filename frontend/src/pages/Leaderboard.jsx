@@ -18,7 +18,7 @@ const Leaderboard = () => {
       const userName = userData ? `${userData.firstName} ${userData.lastName}`.trim() : "";
       setCurrentUserName(userName);
 
-      const response = await fetch("http://localhost:5001/api/leaderboard", {
+      const response = await fetch("https://waste-management-system-88cb.onrender.com/api/leaderboard", {
         headers: token ? {
           Authorization: `Bearer ${token}`,
         } : {},

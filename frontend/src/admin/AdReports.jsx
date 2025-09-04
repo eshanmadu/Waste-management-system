@@ -84,7 +84,7 @@ const AdReports = () => {
     setLoading(true);
     setError(null);
     try {
-      const response = await fetch('http://localhost:5001/api/users');
+      const response = await fetch('https://waste-management-system-88cb.onrender.com/api/users');
       const data = await response.json();
       
       if (!response.ok) {
@@ -104,7 +104,7 @@ const AdReports = () => {
     setLoading(true);
     setError(null);
     try {
-      const response = await fetch('http://localhost:5001/api/redeem');
+      const response = await fetch('https://waste-management-system-88cb.onrender.com/api/redeem');
       if (!response.ok) throw new Error('Failed to fetch redeems');
       const data = await response.json();
       console.log('Redeems data:', data); // Debug log
@@ -121,7 +121,7 @@ const AdReports = () => {
     setLoading(true);
     setError(null);
     try {
-      const response = await fetch('http://localhost:5001/api/report/reports');
+      const response = await fetch('https://waste-management-system-88cb.onrender.com/api/report/reports');
       if (!response.ok) throw new Error('Failed to fetch waste reports');
       const data = await response.json();
       setWasteReports(data);
@@ -137,7 +137,7 @@ const AdReports = () => {
     setLoading(true);
     setError(null);
     try {
-      const response = await fetch('http://localhost:5001/api/recycle');
+      const response = await fetch('https://waste-management-system-88cb.onrender.com/api/recycle');
       if (!response.ok) throw new Error('Failed to fetch recycling data');
       const data = await response.json();
       if (data.success) {
@@ -157,7 +157,7 @@ const AdReports = () => {
     setLoading(true);
     setError(null);
     try {
-      const response = await fetch('http://localhost:5001/api/staff');
+      const response = await fetch('https://waste-management-system-88cb.onrender.com/api/staff');
       if (!response.ok) throw new Error('Failed to fetch staff data');
       const data = await response.json();
       setStaffData(data);
@@ -173,7 +173,7 @@ const AdReports = () => {
     setLoading(true);
     setError(null);
     try {
-      const response = await fetch('http://localhost:5001/api/articles');
+      const response = await fetch('https://waste-management-system-88cb.onrender.com/api/articles');
       if (!response.ok) throw new Error('Failed to fetch articles');
       const data = await response.json();
       setArticles(data);
@@ -189,7 +189,7 @@ const AdReports = () => {
     setLoading(true);
     setError(null);
     try {
-      const response = await fetch('http://localhost:5001/api/events');
+      const response = await fetch('https://waste-management-system-88cb.onrender.com/api/events');
       if (!response.ok) throw new Error('Failed to fetch events');
       const data = await response.json();
       setEvents(data);
@@ -205,7 +205,7 @@ const AdReports = () => {
     setLoading(true);
     setError(null);
     try {
-      const response = await fetch('http://localhost:5001/api/volunteers');
+      const response = await fetch('https://waste-management-system-88cb.onrender.com/api/volunteers');
       if (!response.ok) throw new Error('Failed to fetch volunteers');
       const data = await response.json();
       setVolunteers(data);

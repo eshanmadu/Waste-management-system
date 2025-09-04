@@ -67,7 +67,7 @@ const SubmittedReports = () => {
   const fetchReports = async () => {
     setIsFetching(true);
     try {
-      const response = await fetch("http://localhost:5001/api/report/reports");
+      const response = await fetch("https://waste-management-system-88cb.onrender.com/api/report/reports");
 
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
@@ -112,7 +112,7 @@ const SubmittedReports = () => {
 
   const deleteReport = async (reportId) => {
     try {
-      const response = await fetch(`http://localhost:5001/api/report/reports/${reportId}`, {
+      const response = await fetch(`https://waste-management-system-88cb.onrender.com/api/report/reports/${reportId}`, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json"
@@ -192,7 +192,7 @@ const SubmittedReports = () => {
       }
 
       console.log("Making request to update status...");
-      const response = await fetch(`http://localhost:5001/api/report/reports/${reportId}/status`, {
+      const response = await fetch(`https://waste-management-system-88cb.onrender.com/api/report/reports/${reportId}/status`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

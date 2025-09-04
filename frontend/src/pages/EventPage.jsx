@@ -22,7 +22,7 @@ const EventPage = () => {
 
   const fetchEvents = async () => {
     try {
-      const response = await fetch('http://localhost:5001/api/events');
+      const response = await fetch('https://waste-management-system-88cb.onrender.com/api/events');
       if (!response.ok) throw new Error('Failed to fetch events');
       const data = await response.json();
       
@@ -113,7 +113,7 @@ const EventPage = () => {
       const userId = payload.userId;
 
       // Check if user is a volunteer
-      const volunteerResponse = await fetch(`http://localhost:5001/api/volunteers/user/${userId}`, {
+      const volunteerResponse = await fetch(`https://waste-management-system-88cb.onrender.com/api/volunteers/user/${userId}`, {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -161,7 +161,7 @@ const EventPage = () => {
       console.log('User ID from token:', userId, typeof userId);
 
       // First check if user is a volunteer
-      const volunteerResponse = await fetch(`http://localhost:5001/api/volunteers/user/${userId}`, {
+      const volunteerResponse = await fetch(`https://waste-management-system-88cb.onrender.com/api/volunteers/user/${userId}`, {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -202,7 +202,7 @@ const EventPage = () => {
       console.log('Request body:', requestBody);
 
       // Now join the event with both userId and volunteerId
-      const response = await fetch(`http://localhost:5001/api/events/${selectedEvent._id}/join`, {
+      const response = await fetch(`https://waste-management-system-88cb.onrender.com/api/events/${selectedEvent._id}/join`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

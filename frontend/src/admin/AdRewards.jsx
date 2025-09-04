@@ -34,7 +34,7 @@ const AdRewards = () => {
   useEffect(() => {
     const fetchRewards = async () => {
       try {
-        const response = await fetch('http://localhost:5001/api/rewards');
+        const response = await fetch('https://waste-management-system-88cb.onrender.com/api/rewards');
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
         }
@@ -57,7 +57,7 @@ const AdRewards = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const url = editReward ? `http://localhost:5001/api/rewards/${editReward._id}` : 'http://localhost:5001/api/rewards';
+      const url = editReward ? `https://waste-management-system-88cb.onrender.com/api/rewards/${editReward._id}` : 'https://waste-management-system-88cb.onrender.com/api/rewards';
       const method = editReward ? 'PUT' : 'POST';
 
       const response = await fetch(url, {
@@ -75,7 +75,7 @@ const AdRewards = () => {
       setFormData({ name: '', points: '', description: '', image: '' });
       
       // Refresh rewards list
-      const updatedResponse = await fetch('http://localhost:5001/api/rewards');
+      const updatedResponse = await fetch('https://waste-management-system-88cb.onrender.com/api/rewards');
       const updatedData = await updatedResponse.json();
       setRewards(updatedData);
     } catch (error) {
@@ -91,7 +91,7 @@ const AdRewards = () => {
 
   const handleDelete = async (id) => {
     try {
-      const response = await fetch(`http://localhost:5001/api/rewards/${id}`, {
+      const response = await fetch(`https://waste-management-system-88cb.onrender.com/api/rewards/${id}`, {
         method: 'DELETE',
       });
       if (!response.ok) throw new Error('Delete failed');

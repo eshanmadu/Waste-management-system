@@ -34,11 +34,11 @@ const AdminDashboard1 = () => {
     const fetchAllData = async () => {
       try {
         const [usersRes, volunteersRes, reportsRes, recyclingRes, staffRes] = await Promise.all([
-          fetch('http://localhost:5001/api/users'),
-          fetch('http://localhost:5001/api/volunteers'),
-          fetch('http://localhost:5001/api/report/reports'),
-          fetch('http://localhost:5001/api/recycle'),
-          fetch('http://localhost:5001/api/staff')
+          fetch('https://waste-management-system-88cb.onrender.com/api/users'),
+          fetch('https://waste-management-system-88cb.onrender.com/api/volunteers'),
+          fetch('https://waste-management-system-88cb.onrender.com/api/report/reports'),
+          fetch('https://waste-management-system-88cb.onrender.com/api/recycle'),
+          fetch('https://waste-management-system-88cb.onrender.com/api/staff')
         ]);
 
         if (!usersRes.ok || !volunteersRes.ok || !reportsRes.ok || !recyclingRes.ok || !staffRes.ok) {

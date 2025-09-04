@@ -49,7 +49,7 @@ const RecycleCenter = () => {
   //user search
   const debouncedSearch = debounce(async (searchTerm) => {
     try {
-      const response = await fetch(`http://localhost:5001/api/recycle/users/search?search=${searchTerm}`);
+      const response = await fetch(`https://waste-management-system-88cb.onrender.com/api/recycle/users/search?search=${searchTerm}`);
       const data = await response.json();
       if (data.success) {
         setUsers(data.data);
@@ -72,7 +72,7 @@ const RecycleCenter = () => {
     const fetchSubmissions = async () => {
       setTableLoading(true);
       try {
-        const response = await fetch("http://localhost:5001/api/recycle");
+        const response = await fetch("https://waste-management-system-88cb.onrender.com/api/recycle");
         const data = await response.json();
         
         if (!response.ok) {
@@ -193,8 +193,8 @@ const RecycleCenter = () => {
 
       const method = editingId ? "PUT" : "POST";
       const url = editingId 
-        ? `http://localhost:5001/api/recycle/${editingId}`
-        : "http://localhost:5001/api/recycle";
+        ? `https://waste-management-system-88cb.onrender.com/api/recycle/${editingId}`
+        : "https://waste-management-system-88cb.onrender.com/api/recycle";
 
       const submissionData = {
         userId: selectedUser._id,
@@ -602,7 +602,7 @@ const RecycleCenter = () => {
                                 onClick={async () => {
                                   if (window.confirm('Are you sure you want to delete this entry?')) {
                                     try {
-                                      const response = await fetch(`http://localhost:5001/api/recycle/${submission._id}`, {
+                                      const response = await fetch(`https://waste-management-system-88cb.onrender.com/api/recycle/${submission._id}`, {
                                         method: 'DELETE'
                                       });
                                       const result = await response.json();

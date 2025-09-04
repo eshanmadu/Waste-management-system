@@ -136,7 +136,7 @@ const AddArticlePage = () => {
         return;
       }
 
-      const response = await fetch("http://localhost:5001/api/articles/add", {
+      const response = await fetch("https://waste-management-system-88cb.onrender.com/api/articles/add", {
         method: "POST",
         headers: { 
           "Content-Type": "application/json",

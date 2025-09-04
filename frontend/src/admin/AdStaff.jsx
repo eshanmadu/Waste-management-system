@@ -69,7 +69,7 @@ const AdStaff = () => {
 
   const fetchStaffData = async () => {
     try {
-      const res = await fetch('http://localhost:5001/api/staff');
+      const res = await fetch('https://waste-management-system-88cb.onrender.com/api/staff');
       if (!res.ok) {
         throw new Error('Failed to fetch staff data');
       }
@@ -124,8 +124,8 @@ const AdStaff = () => {
     setIsLoading(true);
     try {
       const url = isEditing 
-        ? `http://localhost:5001/api/staff/${editingId}`
-        : 'http://localhost:5001/api/staff';
+        ? `https://waste-management-system-88cb.onrender.com/api/staff/${editingId}`
+        : 'https://waste-management-system-88cb.onrender.com/api/staff';
       
       const method = isEditing ? 'PUT' : 'POST';
       
@@ -191,7 +191,7 @@ const AdStaff = () => {
     }
 
     try {
-      const response = await fetch(`http://localhost:5001/api/staff/${id}`, {
+      const response = await fetch(`https://waste-management-system-88cb.onrender.com/api/staff/${id}`, {
         method: 'DELETE',
       });
 
