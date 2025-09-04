@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { FaRecycle, FaInfoCircle, FaMapMarkerAlt, FaLeaf, FaGlobe, FaGift, FaShoppingBag } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
-import { motion } from 'framer-motion';
 import ReactConfetti from 'react-confetti';
 import { useWindowSize } from 'react-use';
 
@@ -713,10 +712,7 @@ const Rewards = () => {
               numberOfPieces={500}
               gravity={0.3}
             />
-            <motion.div
-              initial={{ scale: 0.8, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.8, opacity: 0 }}
+            <div
               className="bg-white rounded-2xl p-8 max-w-md w-full mx-4 shadow-xl"
             >
               <div className="text-center">
@@ -755,7 +751,7 @@ const Rewards = () => {
                   </button>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         )}
 

@@ -19,7 +19,6 @@
     "axios": "^1.8.4",
     "canvas-confetti": "^1.9.3",
     "daisyui": "^5.0.4",
-    "framer-motion": "^12.23.12",
     "jspdf": "^3.0.1",
     "jspdf-autotable": "^5.0.2",
     "leaflet": "^1.9.4",
