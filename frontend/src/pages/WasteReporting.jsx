@@ -3,7 +3,6 @@ import { MapContainer, TileLayer, Marker, useMapEvents, useMap } from "react-lea
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import { jsPDF } from "jspdf";
-import confetti from 'canvas-confetti';
 import { useNavigate } from "react-router-dom";
 import { FaSpinner, FaTrash, FaMapMarkerAlt, FaCalendarAlt, FaUser, FaSearch, FaExpand, FaDownload, FaFilePdf, FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { MdPhotoLibrary, MdWarning, MdCheckCircle, MdHourglassEmpty } from "react-icons/md"
@@ -395,7 +394,6 @@ const WasteReporting = () => {
 
       // Show success message and reset form
       setShowPopup(true);
-      confetti();
       
       // Reset form data
       setFormData({

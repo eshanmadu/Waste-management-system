@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { FaRecycle, FaInfoCircle, FaMapMarkerAlt, FaLeaf, FaGlobe, FaGift, FaShoppingBag } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
-import ReactConfetti from 'react-confetti';
-import { useWindowSize } from 'react-use';
+ 
 
 const Rewards = () => {
   const [rewards, setRewards] = useState([]);
@@ -31,7 +30,7 @@ const Rewards = () => {
     city: "",
     state: ""
   });
-  const { width, height } = useWindowSize();
+  
   const [activeTab, setActiveTab] = useState('all');
   const [userRedeems, setUserRedeems] = useState([]);
   const [showCancelModal, setShowCancelModal] = useState(false);
@@ -705,13 +704,6 @@ const Rewards = () => {
         {/* Success Modal */}
         {showSuccessModal && (
           <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-            <ReactConfetti
-              width={width}
-              height={height}
-              recycle={false}
-              numberOfPieces={500}
-              gravity={0.3}
-            />
             <div
               className="bg-white rounded-2xl p-8 max-w-md w-full mx-4 shadow-xl"
             >
